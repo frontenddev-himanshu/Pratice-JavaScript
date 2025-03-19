@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+.pages {
+    width: 100%;
+    height: 100vh;
+    background: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.page2 {
+    background-color: darkcyan;
+}
+
+.loading_screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top .8s;
+    z-index: 100;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top-color: #007BFF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-container {
+    /* font-size: 32px; */
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+.second-text::after {
+    content: "Creative";
+    animation: typing 6s infinite;
+}
+
+@keyframes typing {
+
+    0%,
+    25% {
+        content: "Creative";
+    }
+
+    26%,
+    50% {
+        content: "Innovative";
+    }
+
+    51%,
+    75% {
+        content: "Motivated";
+    }
+
+    76%,
+    100% {
+        content: "Passionate";
+    }
+}
